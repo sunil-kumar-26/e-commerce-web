@@ -4,7 +4,7 @@ const Footer=({})=>{
     
     return(
         <>
-        <div className="max-w-[1440px] h-auto bg-[#232F3E]  py-[0px] pb-[1px]" id="header">
+        <div className="max-w-[1440px] h-auto bg-[#232F3E]  py-[0px] pb-[0px]" id="header">
                  
           <div className="max-w-dvw bg-[#485769] text-[white] text-center font-[500] sm:font-[700] border-[0px] flex justify-center gap-[2px] py-[10px] items-center">
             <FcBiotech className="text-[20px]  "/>

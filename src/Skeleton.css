@@ -1,0 +1,57 @@
+/* Fullscreen skeleton wrapper */
+.skeleton-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f2f2f2;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  /* Reuse the skeleton styles */
+  .skeleton {
+    background-color: #e2e2e2;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .skeleton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150px;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: loading 1.2s infinite;
+  }
+  
+  @keyframes loading {
+    0% {
+      left: -150px;
+    }
+    50% {
+      left: 100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  /* Sizes */
+  .skeleton-header {
+    height: 50px;
+    width: 100%;
+  }
+  
+  .skeleton-block {
+    height: 120px;
+    width: 100%;
+  }
