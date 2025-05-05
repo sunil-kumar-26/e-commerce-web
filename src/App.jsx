@@ -3,7 +3,7 @@ import { Footer } from './components/Footer'
 import Header from './components/Header'
 
 const App = () => {
-  return (
+    return (
   <>
   <div className="max-w-[1470px] h-dvh mx-auto  text-center">
     <Header/>

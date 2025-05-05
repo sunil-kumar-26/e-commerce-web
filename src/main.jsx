@@ -4,6 +4,7 @@ import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx'
 import Content from './Content.jsx'
+import { Card } from './components/Card.jsx';
 const myrouter=createBrowserRouter([
 {
   path:'/',
@@ -11,6 +12,10 @@ const myrouter=createBrowserRouter([
 },{
 path:'/content',
 element:<Content/>
+},
+{
+  path:'/content/:id',
+  element:<Card/>
 }
 ]);
 createRoot(document.getElementById('root')).render(

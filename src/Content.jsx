@@ -6,6 +6,7 @@ import { FaStar } from "react-icons/fa6";
 import Header from './components/Header.jsx';
 import { FaStarHalfAlt } from "react-icons/fa";
 import './Skeleton.css';
+import { NavLink } from 'react-router-dom';
 const API='https://newsapi.org/v2/everything?q=Apple&from=2025-05-02&sortBy=popularity&apiKey=API_KEY'
 const API_KEY='0d6178a5bd0147388714f77a7a1805ca';
 /* note: if you want to search anything just pass the keyword related to that query in above given api .example everything?q=Apple/gogle/modi/china 
@@ -86,12 +87,12 @@ console.dir(parent)
             
                            <div className=" w-[180px] sm:w-[440px]  h-auto p-[4px] bg-blue-100 border-[0px]  mx-auto cursor-pointer" id='card '>
                             
-                            <img src={products.thumbnail} alt={products.category}  
+                          <NavLink to={`/content/${products.id}`}>  <img src={products.thumbnail} alt={products.category}  
                              className=' border-b-[0px] border-[0px] rounded-[3px] border-[black] bg-white w-[200px] sm:w-dvw my-[10px] 
-                              mt-[0px] h-auto  hover:border-b-[1px]'/>
-                            <h4 className='hover:underline text-green-700 hover:text-green-800 font-[800] sm:font-[700] text-[11px] sm:text-[18px]
+                              mt-[0px] active:bg-gray-400 h-auto  hover:border-b-[1px]'/> </NavLink>
+                            <h4 className='hover:underline text-green-700 active:underline hover:text-green-800 font-[800] sm:font-[700] text-[11px] sm:text-[18px]
                               mt-[-8px] sm:my-[-4px] border-0 sm:border-0 '>
-                              {products.title}</h4>
+                             <NavLink to={`/content/${products.id}`}>{products.title}</NavLink> </h4>
                              <div className='flex '>
                               <FaStar className='text-orange-400  text-[12px] sm:text-[16px]'/>
                               <FaStar className='text-orange-400 text-[12px] sm:text-[16px]'/>
